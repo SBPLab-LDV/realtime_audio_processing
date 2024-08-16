@@ -1,40 +1,70 @@
-# 實時音頻處理項目
+# Real-time Audio Processing Project
 
-這個項目演示了如何使用 PyTorch 神經網絡進行實時音頻處理和播放。
+This project demonstrates real-time audio processing and playback using a PyTorch neural network.
 
-## 安裝
+## Features
 
-1. 克隆此存儲庫
-2. 安裝依賴項：`pip install -r requirements.txt`
+- Generate a sine wave audio file
+- Process audio in real-time using a simple PyTorch neural network
+- Stream processed audio to the speaker
 
-## 使用方法
+## Prerequisites
 
-1. 生成測試音頻：
+- Python 3.7+
+- PyTorch
+- NumPy
+- PyAudio
+
+## Installation
+
+1. Clone this repository:
+   ```
+   git clone https://github.com/yourusername/realtime-audio-processing.git
+   cd realtime-audio-processing
+   ```
+
+2. Install the required dependencies:
+   ```
+   pip install -r requirements.txt
+   ```
+
+## Usage
+
+1. Generate the test audio file:
    ```
    python scripts/generate_sin_wave.py
    ```
 
-2. 創建並保存簡單的神經網絡模型：
+2. Create and save the simple neural network model:
    ```
    python scripts/train_simple_network.py
    ```
 
-3. 運行主程序進行實時音頻處理和播放：
+3. Run the main program for real-time audio processing and playback:
    ```
    python main.py
    ```
 
-## 文件結構
+## Project Structure
 
-- `data/`: 存儲音頻文件
-- `models/`: 包含神經網絡模型定義
-- `utils/`: 包含輔助函數和工具
-- `scripts/`: 包含獨立的腳本
-- `main.py`: 主程序
-- `requirements.txt`: 項目依賴項
-- `README.md`: 項目說明文件
+- `data/`: Directory for storing audio files
+- `models/`: Contains neural network model definitions
+- `utils/`: Contains utility functions and tools
+- `scripts/`: Contains standalone scripts
+- `main.py`: Main program for audio processing and playback
+- `requirements.txt`: Project dependencies
+- `README.md`: This file
 
-## 注意事項
+## Notes
 
-- 確保您的系統已正確設置音頻設備。
-- 調整 `main.py` 中的 `BUFFER_MAX_SIZE` 和 `FRAME_DURATION_MS` 可能會影響延遲和音頻質量。
+- Ensure your system's audio devices are properly configured.
+- Adjusting `BUFFER_MAX_SIZE` and `FRAME_DURATION_MS` in `main.py` may affect latency and audio quality.
+- This project is designed for educational purposes and may not be suitable for production environments without further optimization.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
